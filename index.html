@@ -173,10 +173,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="前置知识：ResNet"><a href="#前置知识：ResNet" class="headerlink" title="前置知识：ResNet"></a>前置知识：ResNet</h2><p>我们发现深度CNN网络达到一定深度后再一味地增加层数并不能带来进一步地分类性能提高，反而会招致网络收敛变得更慢，分类准确率也变得更差。过深的网络还会使分类准确度下降。<br>ResNet试图解决这个问题，ResNet有很多旁路的支线将输入直接连到后面的层，使得后面的层可以直接学习残差，传统的卷积层或全连接层在信息传递时，或多或少会存在信息丢失、损耗等问题。ResNet在某种程度上解决了这个问题，通过直接将输入信息绕道传到输出，保护信息的完整性，整个网络则只需要学习输入、输出差别的那一部分（即残差），简化学习目标和难度。<br>残差：假设输入为x，输出为y，那么单元要学习的是y=H(x)这个函数。令F(x)=H(x)-x，令网络学习F(x)，即输出输入之差。这样可以保证x信息的完整传递，并且学习残差可以降低运算量。</p>
-<img src="/Qianftb.github.io/2019/08/12/DenseNet笔记/1.png" title="This is an example image">
-<p>ResNet网络相比VGG能够在深度增加的情况下更有效的维持准确率增长，有效地避免了VGG网络中层数增加到一定程度，模型准确度不升反降的问题。</p>
-<h2 id="DenseNet思想"><a href="#DenseNet思想" class="headerlink" title="DenseNet思想"></a>DenseNet思想</h2>
+<h2 id="前置知识：ResNet"><a href="#前置知识：ResNet" class="headerlink" title="前置知识：ResNet"></a>前置知识：ResNet</h2><p>我们发现深度CNN网络达到一定深度后再一味地增加层数并不能带来进一步地分类性能提高，反而会招致网络收敛变得更慢，分类准确率也变得更差。过深的网络还会使分类准确度下降。</p>
         
           <a class="article-more-a" href="/Qianftb.github.io/2019/08/12/DenseNet笔记/#more">more >></a>
         
@@ -538,11 +535,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo图片不显示</a>
+                <a href="javascript:void(0)" class="js-tag color4">DenseNet</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">DenseNet</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo图片不显示</a>
               </li>
             
             <div class="clearfix"></div>
