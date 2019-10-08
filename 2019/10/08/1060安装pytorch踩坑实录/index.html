@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://github.com/Qianftb.github.io/2019/10/08/1060安装pytorch踩坑实录/2.png">
 <meta property="og:image" content="https://github.com/Qianftb.github.io/2019/10/08/1060安装pytorch踩坑实录/3.png">
 <meta property="og:image" content="https://github.com/Qianftb.github.io/2019/10/08/1060安装pytorch踩坑实录/4.png">
-<meta property="og:updated_time" content="2019-10-08T03:44:41.772Z">
+<meta property="og:updated_time" content="2019-10-08T05:41:52.973Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1060安装pytorch踩坑实录">
 <meta name="twitter:description" content="电脑是Y7000-1060，CUDA版本9.0，python版本3.6，使用anaconda安装。折腾了很久，故留下经历，希望有所帮助。 1、pytorch官网pytorch官网给出了命令行安装的办法，因为需要anaconda，所以选择如下配置  然后失败，原因pytorch包下载太慢，挂梯子不行，换源也不行，很奇怪，可能和anaconda公司有关 2、GitHub参考了此链接的方法https:/">
@@ -185,7 +185,10 @@
 <p>然后失败，原因pytorch包下载太慢，挂梯子不行，换源也不行，很奇怪，可能和anaconda公司有关</p>
 <h1 id="2、GitHub"><a href="#2、GitHub" class="headerlink" title="2、GitHub"></a>2、GitHub</h1><p>参考了此链接的方法<a href="https://github.com/williamFalcon/pytorch-gpu-install">https://github.com/williamFalcon/pytorch-gpu-install</a></p>
 <img src="/Qianftb.github.io/2019/10/08/1060安装pytorch踩坑实录/2.png" title="This is an example image">
-<p>卡在了命令 conda install pytorch torchvision cuda90 -c pytorch<br>原因pytorch包下载太慢，挂梯子不行，换源也不行</p>
+<p>卡在了命令 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pytorch torchvision cuda90 -c pytorch</span><br></pre></td></tr></table></figure>
+
+<p>原因pytorch包下载太慢，挂梯子不行，换源也不行</p>
 <h1 id="3、离线安装"><a href="#3、离线安装" class="headerlink" title="3、离线安装"></a>3、离线安装</h1><p>找到国内conda源，下载pytorch对应版本pytorch-1.2.0-py3.6_cuda100_cudnn7_1.tar.bz2（我也不知道为什么是cuda100），使用conda安装没有问题，但是conda会使用更高的信道替代，也就是会重新下载。失败。换用pip安装，安装极慢，无反应。</p>
 <h1 id="4、最终解决办法"><a href="#4、最终解决办法" class="headerlink" title="4、最终解决办法"></a>4、最终解决办法</h1><p>pytorch官网，选择pip安装，<img src="/Qianftb.github.io/2019/10/08/1060安装pytorch踩坑实录/3.png" title="This is an example image">报网络错误，<img src="/Qianftb.github.io/2019/10/08/1060安装pytorch踩坑实录/4.png" title="This is an example image">去网址下载whl包（cu92/torch-1.2.0%2Bcu92-cp36-cp36m-win_amd64.whl），离线安装，成功。</p>
 
